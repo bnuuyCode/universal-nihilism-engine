@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bnuuy</groupId>
+    <artifactId>universal-nihilism-engine</artifactId>
+    <version>1.0.0-ETERNAL</version>
+    <packaging>jar</packaging>
+
+    <name>Universal Nihilism Engine</name>
+    <description>
+        An enterprise grade platform for the exhaustive computational verification of a single
+        boolean whose value was known before the process started.
+    </description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+        <application.main.class>
+            com.bnuuy.universalnihilism.UniversalNihilismEngineApplicationBootstrapMain
+        </application.main.class>
+    </properties>
+
+    <!--
+        There are no dependencies. Not because none exist, but because every dependency is a
+        promise made by someone else about a future they do not control.
+        See docs/adr/0009-zero-third-party-runtime-dependencies.md.
+    -->
+
+    <build>
+        <finalName>universal-nihilism-engine</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.bnuuy.universalnihilism.UniversalNihilismEngineApplicationBootstrapMain</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
